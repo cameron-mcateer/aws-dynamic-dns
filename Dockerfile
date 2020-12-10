@@ -4,8 +4,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 COPY index.js ./
-COPY ./app ./app
 
-RUN npm install
+RUN /usr/local/bin/npm install
 
-CMD [ "node", "index.js" ]
+CMD [ "/usr/local/bin/node", "index.js" ]
